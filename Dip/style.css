@@ -4,7 +4,7 @@
 	font-family: Jost;
 	font-weight: 400;
 }
-.row {
+.row, .rowx {
 	display: flex;
 	justify-content: space-between;
 }
@@ -52,6 +52,9 @@ li, h2, p {
 }
 span {
 	font-size: 19px;
+}
+.smenu {
+	display: none;
 }
 .logo img{
 	margin-right: 8px;
@@ -153,7 +156,7 @@ footer {
 .px {
 	font-size: 20px;
 }
-button {
+button, .gobut {
 	background: linear-gradient(91.13deg, #462FD3 1.5%, #670CDB 103.63%);
 	font-size: 32px;
 	padding: 8px 37px;
@@ -161,6 +164,12 @@ button {
 	border-radius: 18px;
 	border: none;
 	color: white;
+}
+.gobut {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
 }
 .arrow {
 	position: absolute;
@@ -245,8 +254,8 @@ button {
 	width: 78%;
 }
 .i5 .cent {
-	margin-top: 50px;
-	margin-left: 50px;
+	margin-top: 10%;
+	margin-left: 10%;
 }
 .i6 {
 	bottom: 0;
@@ -280,4 +289,78 @@ button {
 }
 .lx div {
 	width: 22%;
+}
+@media only screen and (max-width: 600px){
+ .row{
+  flex-direction: column;
+ }
+ .logo img {
+ 	margin: 0;
+ }
+ .arrow, .menu, .i2, .tr {
+ 	display: none;
+ }
+ .right {
+ 	align-items: center;
+ 	position: relative;
+ }
+ .col{
+  margin-bottom: 24px;
+ }
+ button, .gobut {
+ 	font-size: 18px;
+ 	padding: 5px 10px;
+ }
+ h1{
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 20px;
+ }
+ h3{
+  font-size: 24px;
+  margin-top: 36px;
+ }
+ h4, .hw{
+  font-size: 20px;
+ }
+ li, p, span, h2{
+  font-size: 18px;
+ }
+   .half,
+   .m2{
+     width: 96%;
+   }
+   .x img {
+   	 width: 40px;
+   }
+ .i1{
+  width: 100%;
+  left: -2%;
+ }
+ .i4,
+ .i5{
+  width: 100%;
+  left: -2%;
+  margin-top: 24px;
+ }
+ .process .col{
+  width: 75%;
+ }
+ .AR {
+ 	right: 0;
+ }
+ .x1 img, .text{
+ 	width: 100%;
+ }
+ .x1 h4 {
+ 	width: 90%;
+ }
+ .t2,
+ .t1{
+  width: 100%;
+  margin: 36px 0 12px;
+ }
+ .w1, .w2 {
+ 	width: 85%;
+ }
 }
