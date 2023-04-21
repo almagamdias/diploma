@@ -3,11 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Общество</title>
+	<title>Онлайн платформа услуг общества инвалидов предпринимателей</title>
 	<link rel="stylesheet" href="style.css" type="text/css">
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script><!--JQuery-->
 	<link href='https://fonts.googleapis.com/css?family=Jost' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Secular One' rel='stylesheet'>
+	<!--Шрифты-->
 	<script src="app.js"></script>
 </head>
 <body>
@@ -17,24 +18,19 @@
 				<img src="R/logo.png">
 				<h2>BIRLIK</h2>
 			</li>
-			<div class="row cent half menu">
-				<li>клининг</li>
-				<li>макетирование</li>
-				<li>бухгалтерские услуги</li>
-				<li>мебель</li>
+			<div class="row cent menu">
+				<li class="e1">клининг</li>
+				<li class="e2">макетирование</li>
+				<li class="e3">бухгалтерские услуги</li>
+				<li class="e4">мебель</li>
 			</div>
-			<div class="smenu col">
-				<li>клининг</li>
-				<li>макетирование</li>
-				<li>бухгалтерские услуги</li>
-				<li>мебель</li>
-			</div>
-		</ul>
+		</ul><!--Главное меню. Если нажать одну из них, то прокрутит до определенного места.
+			Также в мобильной адаптации нажав на логотип Бирликб то появится меню.-->
 	</header>
 	<main>
 		<div class="m2 row cent rel">
 			<div class="i1 rel ir gl"><img src="R/All.png"></div>
-			<div class="text col right abs ART gr">
+			<div class="col right abs ART gr text">
 				<div class="col cent">
 					<div class="logo row cent">
 						<img src="R/logo.png">
@@ -44,25 +40,21 @@
 					<span>инвалидов - предпринимателей</span>
 				</div>
 				<h1>Мы не видим границ, только возможности</h1>
-				<a href="form.html" class="gobut">Заказать консультацию</a>
-			</div>
+				<button class="gobut">Заказать консультацию</button>
+			</div><!--Главная страница. Нажав на кнопку появится ФИО, Проблемы и телефон.-->
 		</div>
-		<div class="arrow">
-			<img src="R/arrow.png">
-		</div>
-		<br>
-		<div class="m2 row cent rel">
-			<div class="col text">
-				<div class="gt">
+		<div class="m2 row cent rel y1">
+			<div class="col">
+				<div class="gt text">
 					<h3>Клининг домов, квартир и офисов</h3>
 					<p>Аутсорсинг клиниговых услуг отдельных офисов, а также целых бизнес-центров с организацией комплексных клининговых процессов всего здания.</p>
-				</div>
-				<div class="t1 col cent gl">
-					<h4>Мы предоставим:</h4>
-					<div class="l col cent gl">
-						<div class="x xr rowx cent"><img src="R/tube.png"><p>химчистка</p></div>
-						<div class="x xr rowx cent"><img src="R/home.png"><p>генеральная уборка</p></div>
-						<div class="x xr rowx cent"><img src="R/keep.png"><p>регулярная уборка</p></div>
+					<div class="t1 col cent gl">
+						<h4>Мы предоставим:</h4>
+						<div class="l col cent gl">
+							<div class="x xr rowx cent"><img src="R/tube.png"><p>химчистка</p></div>
+							<div class="x xr rowx cent"><img src="R/home.png"><p>генеральная уборка</p></div>
+							<div class="x xr rowx cent"><img src="R/keep.png"><p>регулярная уборка</p></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -70,7 +62,7 @@
 				<img src="R/clean.png">
 			</div>
 		</div>
-		<div class="col rel">
+		<div class="col rel y2">
 			<div class="m2 col cent">
 				<div class="col cent">
 					<div class="col cent gt">
@@ -90,13 +82,13 @@
 					</div>
 				</div>
 			</div>
-			<div class="abs AT i3 ir red">
+			<div class="abs AT i3 irX red">
 				<img src="R/Piston.png">
 			</div>
 		</div>
 		<div class="m2 row rel">
 			<div class="i4 rel ir gl"><img src="R/Illustr.png"></div>
-			<div class="abs ART col right">
+			<div class="rel ART col right text y3">
 				<div class="t2 gt">
 					<h3>Бухгалтерские услуги</h3>
 					<p>От постановки бухгалтерского учета до полноценного ведения всей бухгалтерской документации по доступной цене</p>
@@ -115,7 +107,7 @@
 				<p>Современная мебель точно по вашим размерам</p>
 				<div class="i5 rel col">
 					<img class="exp" src="R/Cloud.png">
-					<div class="i6 row abs ir">
+					<div class="i6 row abs">
 						<img class="exp" src="R/Deco.png">
 					</div>
 					<div class="abs rowx cent">
@@ -148,16 +140,34 @@
 						<img class="exp" src="R/Luxury.png">
 					</div>
 					<div class="col cent h">
-						<img src="R/bed.png">
-						<img src="R/ward.png">
-						<img src="R/sofa.png">
-						<img src="R/food.png">
+						<div><img src="R/bed.png"></div>
+						<div><img src="R/ward.png"></div>
+						<div><img src="R/sofa.png"></div>
+						<div><img src="R/food.png"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="m2 col cent red">
-			<button>Заказать консультацию</button>
+			<button class="gobut">Заказать консультацию</button>
+		</div>
+		<div class="fix col cent"><!--Появляется окно после нажатия "заказать консультацию" -->
+			<button class="close">X</button><!--Закрыть окно-->
+			<div class="col">
+				<p>ФИО</p>
+				<input type="text" name="">
+			</div>
+			<div class="col">
+				<p>Ваши проблемы</p>
+				<input type="text" name="">
+			</div>
+			<div class="col">
+				<p>Номер телефона</p>
+				<input type="number" name="">
+			</div>
+			<div class="col">
+				<input class="gobut" type="submit" name="Отправить">
+			</div>
 		</div>
 	</main>
 	<footer>

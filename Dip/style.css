@@ -5,20 +5,44 @@
 	font-weight: 400;
 }
 .row, .rowx {
-	display: flex;
+	display: flex;/*rowx не изменяется вне зависимости от адаптации*/
 	justify-content: space-between;
 }
 .col {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-between;/*row-ряд, col-столбец*/
 }
 .cent {
-	align-items: center;
+	align-items: center;/*На центр*/
 }
 .right {
 	align-items: flex-end;
-	text-align: right;
+	text-align: right;/*На правый край страницы*/
+}
+.fix {
+	position: fixed;
+	top: 20%;
+	left: 30%;
+	background: white;
+	width: 36%;
+	display: none;/*Изначально нету окна с ФИО, телефоном. А также на фиксированной позиции*/
+	padding: 2%;
+}
+.fix div {
+	margin: 20px 0;
+	width: 85%;/*Просто дизайн*/
+}
+.close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	border: none;
+	background: white;/*Дизайн кнопки Закрыть*/
+}
+input {
+	border-color: rgba(170, 170, 170, 0.3);
+	font-size: 20px;/*Просто дизайн*/
 }
 h1 {
 	font-size: 64px;
@@ -50,39 +74,50 @@ li, h2, p {
 	font-size: 24px;
 	list-style: none;
 }
-span {
-	font-size: 19px;
+.px {
+	font-size: 20px;
 }
-.smenu {
-	display: none;
+span {
+	font-size: 19px;/*Просто размер текста*/
 }
 .logo img{
 	margin-right: 8px;
 }
+header ul {
+	width: 80%;
+	margin: 0 auto;/*Просто центр*/
+}
 header, footer {
 	background-color: black;
 	color: white;
-	padding: 16px 0;
+	padding: 16px 0;/*Меню и нижняя часть*/
 }
 footer {
-	padding: 70px;
+	padding: 5%;
 }
-.half {
-	width: 65%;
+.menu {
 	margin: 0 auto;
+	width: 70%;
+}
+.menu li {
+	margin: 0 10px;
+	cursor: pointer;/*курсор рука с пальцем*/
 }
 .m2 {
 	margin: 0 auto;
 	width: 84%;
-	margin-bottom: 70px;
+	margin-bottom: 70px;/*Контейнер*/
 }
-.i1 {
-	left: -5%;
-	width: 50%;
+.ir {
+	width: 50%;/*Картины*/
 }
-.ir img, .lx img {
+.text {
+	width: 60%;/*Текст и его длина*/
+}
+.ir img, .lx img, .irX img {
 	width: 100%;
 }
+/*Анимации*/
 @keyframes wipe-enter {
   0% {
     transform: translateX(-100px);
@@ -90,7 +125,7 @@ footer {
   100% {
     transform: translateX(0);
     opacity: 100%;
-  }
+  }/*Слева*/
 }
 @keyframes wipe-enter2 {
   0% {
@@ -99,7 +134,7 @@ footer {
   100% {
     transform: translateX(0);
     opacity: 100%;
-  }
+  }/*Справа*/
 }
 @keyframes topX {
   0% {
@@ -108,7 +143,7 @@ footer {
   100% {
     transform: translateY(0);
     opacity: 100%;
-  }
+  }/*Сверху*/
 }
 @keyframes reduce {
   0% {
@@ -117,8 +152,9 @@ footer {
   100% {
     transform: scaleX(1.0);
     opacity: 100%;
-  }
+  }/*Уменьшение до нормального*/
 }
+/*Длительность анимации*/
 @media (prefers-reduced-motion: no-preference) {
   .line-animation {
     animation: wipe-enter 1.4s 1;
@@ -137,52 +173,38 @@ footer {
     animation-fill-mode: forwards;
   }
 }
-
-.ART {
+.ART {/*Вправо в контейнере*/
 	right: 0;
 }
-.AR {
+.AR {/*Вправо в странице*/
 	right: -10%;
 }
-.AT {
+.AT {/*Вверх в контейнере*/
 	top: 0;
 }
-.abs {
+.abs {/*Абсолютная позиция без пространства*/
 	position: absolute;
 }
-.text {
-	width: 68%;
-}
-.px {
-	font-size: 20px;
-}
-button, .gobut {
+.gobut {
 	background: linear-gradient(91.13deg, #462FD3 1.5%, #670CDB 103.63%);
 	font-size: 32px;
 	padding: 8px 37px;
 	box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.25);
 	border-radius: 18px;
 	border: none;
-	color: white;
+	color: white;/*Дизайн кнопки Заказать консультацию*/
 }
 .gobut {
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
-    text-decoration: none;
-}
-.arrow {
-	position: absolute;
-	left: 47%;
-	bottom: 0;
-}
-.t2 {
-	width: 600px;
+    text-decoration: none;/*Переназначение в кнопку*/
 }
 .t1 {
-	width: 450px;
-	margin: 60px 15% 20px;
+	width: 75%;
+	margin: 60px auto;
 }
+/*Зеленый фон с градиентом*/
 .l, .x {
 	width: 100%;
 }
@@ -209,14 +231,14 @@ button, .gobut {
 }
 .i2 {
 	margin-top: 200px;
-	width: 57%;
 }
 .process, .gt, .gl, .gr, .red {
-	opacity: 0%;
+	opacity: 0%;/*Прозрачные до анимации*/
 }
 .exp, .process, .process img {
 	width: 100%;
 }
+/*Макетирование*/
 .AT h3 {
 	margin-top: 100px;
 }
@@ -235,17 +257,22 @@ button, .gobut {
 	color: white;
 }
 .process .col {
-	width: 25%;
+	width: 25%;/*Проекты*/
 }
+/*Назарбаев*/
 .tr {
 	transform: rotate(90deg);
 	right: -120px;
 }
+/*Бухгалтерские услуги*/
 .i4 {
-	width: 50%;
 	left: -10%;
 	margin-top: 50px;
 }
+.t2 {
+	width: 90%;
+}
+/*Мебель*/
 .i5 {
 	margin-top: 50px;
 	left: -5%;
@@ -257,6 +284,10 @@ button, .gobut {
 	margin-top: 10%;
 	margin-left: 10%;
 }
+.w1 {
+	width: 58%;
+}
+/*Мебель 2 столбец*/
 .i6 {
 	bottom: 0;
 	z-index: 1;
@@ -268,37 +299,67 @@ button, .gobut {
 }
 .green {
 	background: linear-gradient(270deg, #80E396 2.43%, rgba(201, 241, 86, 0.1) 100%);
-	padding: 5px;
+	padding: 3%;
 	width: 80%;
-}
-.w1 {
-	width: 60%;
 }
 .w2 {
-	width: 35%;
+	width: 40%;
 }
+/*Мебель Переключение*/
 .h {
-	width: 11%;
+	width: 12%;
+}
+.h div {
+	height: 20%;
 }
 .h img {
-	padding: 15% 0;
+	width: 100%;
 }
+/*Быстро, Качественно, Уникально*/
 .lx {
-	width: 80%;
+	width: 85%;
 	margin: 20px 0 40px;
 }
 .lx div {
-	width: 22%;
+	width: 15%;
 }
-@media only screen and (max-width: 600px){
+/*Адаптация для планшетов и малых ПК(Уменьшение размера текста)*/
+@media only screen and (max-width: 1200px){
+	h1 {
+		font-size: 36px;
+	}
+	h3 {
+		font-size: 32px;
+	}
+	.hw, h4 {
+		font-size: 26px;
+	}
+	.hx, button, .gobut {
+		font-size: 21px;
+	}
+	li, h2, p {
+		font-size: 16px;
+	}
+	.px {
+		font-size: 14px;
+	}
+	.x img {
+		width: 50px;
+	}
+}
+/*Адаптация для Смартфонов (Уменьшение размера текста и многие строки(ряды) станут столбцами)*/
+@media only screen and (max-width: 700px){
  .row{
   flex-direction: column;
  }
  .logo img {
  	margin: 0;
  }
- .arrow, .menu, .i2, .tr {
- 	display: none;
+ .menu, .i2, .tr {
+ 	display: none;/*Некоторые элементы убираются*/
+ }
+ .menu li{
+ 	margin: 20px 0;
  }
  .right {
  	align-items: center;
@@ -307,7 +368,7 @@ button, .gobut {
  .col{
   margin-bottom: 24px;
  }
- button, .gobut {
+ .gobut {
  	font-size: 18px;
  	padding: 5px 10px;
  }
@@ -326,30 +387,25 @@ button, .gobut {
  li, p, span, h2{
   font-size: 18px;
  }
-   .half,
-   .m2{
+ .m2{
      width: 96%;
    }
    .x img {
    	 width: 40px;
    }
- .i1{
-  width: 100%;
+ .i1, .i4, .i5{
   left: -2%;
  }
- .i4,
- .i5{
-  width: 100%;
-  left: -2%;
-  margin-top: 24px;
+ .l {
+ 	width: 70%;
  }
  .process .col{
-  width: 75%;
+  width: 80%;
  }
  .AR {
  	right: 0;
  }
- .x1 img, .text{
+ .x1 img, .text, .t2, .t1, .i1, .i4, .i5{
  	width: 100%;
  }
  .x1 h4 {
@@ -357,7 +413,6 @@ button, .gobut {
  }
  .t2,
  .t1{
-  width: 100%;
   margin: 36px 0 12px;
  }
  .w1, .w2 {
