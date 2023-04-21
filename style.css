@@ -1,0 +1,421 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Jost;
+	font-weight: 400;
+}
+.row, .rowx {
+	display: flex;/*rowx не изменяется вне зависимости от адаптации*/
+	justify-content: space-between;
+}
+.col {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;/*row-ряд, col-столбец*/
+}
+.cent {
+	align-items: center;/*На центр*/
+}
+.right {
+	align-items: flex-end;
+	text-align: right;/*На правый край страницы*/
+}
+.fix {
+	position: fixed;
+	top: 20%;
+	left: 30%;
+	background: white;
+	width: 36%;
+	display: none;/*Изначально нету окна с ФИО, телефоном. А также на фиксированной позиции*/
+	padding: 2%;
+}
+.fix div {
+	margin: 20px 0;
+	width: 85%;/*Просто дизайн*/
+}
+.close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	border: none;
+	background: white;/*Дизайн кнопки Закрыть*/
+}
+input {
+	border-color: rgba(170, 170, 170, 0.3);
+	font-size: 20px;/*Просто дизайн*/
+}
+h1 {
+	font-size: 64px;
+}
+h2 {
+	font-family: Secular One;
+}
+h3 {
+	font-size: 48px;
+	font-weight: 600;
+	padding: 12px 0;
+	margin-top: 60px;
+}
+.h3l {
+	font-weight: 400;
+	letter-spacing: 0.35em;
+	text-align: center;
+}
+h4 {
+	font-size: 40px;
+}
+.hw {
+	font-weight: 500;
+}
+.hx {
+	font-size: 36px;
+}
+li, h2, p {
+	font-size: 24px;
+	list-style: none;
+}
+.px {
+	font-size: 20px;
+}
+span {
+	font-size: 19px;/*Просто размер текста*/
+}
+.logo img{
+	margin-right: 8px;
+}
+header ul {
+	width: 80%;
+	margin: 0 auto;/*Просто центр*/
+}
+header, footer {
+	background-color: black;
+	color: white;
+	padding: 16px 0;/*Меню и нижняя часть*/
+}
+footer {
+	padding: 5%;
+}
+.menu {
+	margin: 0 auto;
+	width: 70%;
+}
+.menu li {
+	margin: 0 10px;
+	cursor: pointer;/*курсор рука с пальцем*/
+}
+.m2 {
+	margin: 0 auto;
+	width: 84%;
+	margin-bottom: 70px;/*Контейнер*/
+}
+.ir {
+	width: 50%;/*Картины*/
+}
+.text {
+	width: 60%;/*Текст и его длина*/
+}
+.ir img, .lx img, .irX img {
+	width: 100%;
+}
+/*Анимации*/
+@keyframes wipe-enter {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100%;
+  }/*Слева*/
+}
+@keyframes wipe-enter2 {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100%;
+  }/*Справа*/
+}
+@keyframes topX {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100%;
+  }/*Сверху*/
+}
+@keyframes reduce {
+  0% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    transform: scaleX(1.0);
+    opacity: 100%;
+  }/*Уменьшение до нормального*/
+}
+/*Длительность анимации*/
+@media (prefers-reduced-motion: no-preference) {
+  .line-animation {
+    animation: wipe-enter 1.4s 1;
+    animation-fill-mode: forwards;
+  }
+  .line-animation2 {
+    animation: wipe-enter2 1.4s 1;
+    animation-fill-mode: forwards;
+  }
+  .topX {
+  	animation: topX 1.4s 1;
+    animation-fill-mode: forwards;
+  }
+  .reduce {
+  	animation: reduce 1.4s 1;
+    animation-fill-mode: forwards;
+  }
+}
+.ART {/*Вправо в контейнере*/
+	right: 0;
+}
+.AR {/*Вправо в странице*/
+	right: -10%;
+}
+.AT {/*Вверх в контейнере*/
+	top: 0;
+}
+.abs {/*Абсолютная позиция без пространства*/
+	position: absolute;
+}
+.gobut {
+	background: linear-gradient(91.13deg, #462FD3 1.5%, #670CDB 103.63%);
+	font-size: 32px;
+	padding: 8px 37px;
+	box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.25);
+	border-radius: 18px;
+	border: none;
+	color: white;/*Дизайн кнопки Заказать консультацию*/
+}
+.gobut {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;/*Переназначение в кнопку*/
+}
+.t1 {
+	width: 75%;
+	margin: 60px auto;
+}
+/*Зеленый фон с градиентом*/
+.l, .x {
+	width: 100%;
+}
+.l {
+	margin-top: 36px;
+}
+.xt {
+	background: linear-gradient(90deg, #5AFF7F 0%, rgba(86, 241, 120, 0) 86.67%);
+}
+.xr {
+	background: linear-gradient(270deg, #5AFF7F 0%, rgba(86, 241, 120, 0) 86.67%);
+}
+.x {
+	border-radius: 63px;
+	font-size: 32px;
+	margin: 25px 0;
+	animation-duration: 1.2s;
+}
+.x p {
+	margin: 0 auto;
+}
+.rel {
+	position: relative;
+}
+.i2 {
+	margin-top: 200px;
+}
+.process, .gt, .gl, .gr, .red {
+	opacity: 0%;/*Прозрачные до анимации*/
+}
+.exp, .process, .process img {
+	width: 100%;
+}
+/*Макетирование*/
+.AT h3 {
+	margin-top: 100px;
+}
+.pc {
+	text-align: center;
+	margin: 25px;
+}
+.x1 {
+	margin-top: 45px;
+	background-color: #80E396;
+	border-radius: 30px;
+}
+.x1 h4 {
+	margin: 0 auto;
+	width: 45%;
+	color: white;
+}
+.process .col {
+	width: 25%;/*Проекты*/
+}
+/*Назарбаев*/
+.tr {
+	transform: rotate(90deg);
+	right: -120px;
+}
+/*Бухгалтерские услуги*/
+.i4 {
+	left: -10%;
+	margin-top: 50px;
+}
+.t2 {
+	width: 90%;
+}
+/*Мебель*/
+.i5 {
+	margin-top: 50px;
+	left: -5%;
+}
+.i5 .cent, .black {
+	width: 78%;
+}
+.i5 .cent {
+	margin-top: 10%;
+	margin-left: 10%;
+}
+.w1 {
+	width: 58%;
+}
+/*Мебель 2 столбец*/
+.i6 {
+	bottom: 0;
+	z-index: 1;
+}
+.black {
+	background-color: black;
+	margin-top: 5%;
+	padding: 15px;
+}
+.green {
+	background: linear-gradient(270deg, #80E396 2.43%, rgba(201, 241, 86, 0.1) 100%);
+	padding: 3%;
+	width: 80%;
+}
+.w2 {
+	width: 40%;
+}
+/*Мебель Переключение*/
+.h {
+	width: 12%;
+}
+.h div {
+	height: 20%;
+}
+.h img {
+	width: 100%;
+}
+/*Быстро, Качественно, Уникально*/
+.lx {
+	width: 85%;
+	margin: 20px 0 40px;
+}
+.lx div {
+	width: 15%;
+}
+/*Адаптация для планшетов и малых ПК(Уменьшение размера текста)*/
+@media only screen and (max-width: 1200px){
+	h1 {
+		font-size: 36px;
+	}
+	h3 {
+		font-size: 32px;
+	}
+	.hw, h4 {
+		font-size: 26px;
+	}
+	.hx, button, .gobut {
+		font-size: 21px;
+	}
+	li, h2, p {
+		font-size: 16px;
+	}
+	.px {
+		font-size: 14px;
+	}
+	.x img {
+		width: 50px;
+	}
+}
+/*Адаптация для Смартфонов (Уменьшение размера текста и многие строки(ряды) станут столбцами)*/
+@media only screen and (max-width: 700px){
+ .row{
+  flex-direction: column;
+ }
+ .logo img {
+ 	margin: 0;
+ }
+ .menu, .i2, .tr {
+ 	display: none;/*Некоторые элементы убираются*/
+ }
+ .menu li{
+ 	margin: 20px 0;
+ }
+ .right {
+ 	align-items: center;
+ 	position: relative;
+ }
+ .col{
+  margin-bottom: 24px;
+ }
+ .gobut {
+ 	font-size: 18px;
+ 	padding: 5px 10px;
+ }
+ h1{
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 20px;
+ }
+ h3{
+  font-size: 24px;
+  margin-top: 36px;
+ }
+ h4, .hw{
+  font-size: 20px;
+ }
+ li, p, span, h2{
+  font-size: 18px;
+ }
+ .m2{
+     width: 96%;
+   }
+   .x img {
+   	 width: 40px;
+   }
+ .i1, .i4, .i5{
+  left: -2%;
+ }
+ .l {
+ 	width: 70%;
+ }
+ .process .col{
+  width: 80%;
+ }
+ .AR {
+ 	right: 0;
+ }
+ .x1 img, .text, .t2, .t1, .i1, .i4, .i5{
+ 	width: 100%;
+ }
+ .x1 h4 {
+ 	width: 90%;
+ }
+ .t2,
+ .t1{
+  margin: 36px 0 12px;
+ }
+ .w1, .w2 {
+ 	width: 85%;
+ }
+}
