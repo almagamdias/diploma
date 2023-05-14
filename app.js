@@ -4,6 +4,7 @@ $(document).ready(function(){
   const lineR = document.querySelectorAll('.gr');
   const texts = document.querySelectorAll('.gt');
   const red = document.querySelectorAll('.red');
+  var x = 0;
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -90,5 +91,15 @@ $(document).ready(function(){
   $(".close").click(function(){
     $(".fix").hide();
     $('body').css('background', 'white');
+  });
+  $(".cl").click(function() {
+    if (x<0) x += 104.15;
+    else x = -1353.95;
+    $(".black img").css('transform', "translateX("+x+"%)");
+  });
+  $(".cr").click(function() {
+    if (x>-1300) x -= 104.15;
+    else x = 0;
+    $(".black img").css('transform', "translateX("+x+"%)");
   });
 });
