@@ -19,3 +19,9 @@
 -Removed Backend(Temp)
 -Added some features
 -Added window "Submit"
+1.4.1
+-Fixed bugs
+1.4.2
+-Added some images
+1.4.3(1)
+-Added more images
